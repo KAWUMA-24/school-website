@@ -65,3 +65,15 @@ img {
     max-width: 100%;
     height: auto;
 }
+students-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .students-table th, .students-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .students-table th {
+            background-color: #f2f2f2;
+    }
