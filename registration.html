@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration - My School</title>
     <link rel="stylesheet" href="mystyle.css">
+    <stript src=" https://smtpjs.com/v3/smtp.js"></stript>
 </head>
 <body>
     <header>
@@ -19,7 +20,7 @@
     </header>
     <section id="registration">
         <h2>Registration Form</h2>
-        <form action="/submit_registration" method="post">
+        <form on submit= "sendEmail(); reset(); return false;">
             <label for="name">Parents/guardian name:</label>
             <input type="text" id="name" name="name" required><br>
             <label for="email">Email:</label>
@@ -45,4 +46,19 @@
         <p>© 2024 My School. All rights reserved.</p>
     </footer>
 </body>
+    <script>
+
+function sendEmail({
+    Host : "smtp.gmail.com",
+    Username : "kawumadeo53@gmail.com",
+    Password : "0705865552#",
+    To : 'ssebulimejames2003@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New post from a website",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+        
+    </script>
 </html>
